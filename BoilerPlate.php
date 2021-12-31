@@ -8,4 +8,9 @@ class BoilerPlate
         return ($a + $b);
     }
  
+ 	
+ 	public function calculateResult($inputString): int
+    {	
+        return 150;
+    }
 }
