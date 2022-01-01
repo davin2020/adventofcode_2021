@@ -46,17 +46,27 @@ class BoilerPlateTest extends TestCase
 
 
 
-    public function testSuccess_CalculateResult(): void
+    public function testSuccess1_calculateFinalPosition150(): void
     {
-        $firstInput = "
-forward 5
+        $firstInput = "forward 5
 down 5
 forward 8
 up 3
 down 8
 forward 2";  
-        $result = $this->boiler->calculateResult($firstInput);
+        $result = $this->boiler->calculateFinalPosition($firstInput);
         $this->assertEquals(150, $result);
+    }
+
+        public function testSuccess2_calculateFinalPosition130(): void
+    {
+        $secondInput = "forward 5
+down 5
+forward 8
+up 3
+down 8";  
+        $result = $this->boiler->calculateFinalPosition($secondInput);
+        $this->assertEquals(130, $result);
     }
 
 }
