@@ -16,17 +16,13 @@
 		echo '<p>Hello 2021 Advent of Code<p>';
 		$boiler = new BoilerPlate();
 
-		$firstInput = "
-forward 5
+		$firstInput = "forward 5
 down 5
 forward 8
 up 3
-down 8
-forward 2";  
-		$result = $boiler->calculateResult($firstInput);
-		print_r('Result is: ' . $result);
-
-
+down 8";  
+		$result = $boiler->calculateFinalPosition($firstInput);
+		print_r('<br><br>The Final Position of Horizontal Position times Depth is: ' . $result);
 
 		?>
 
