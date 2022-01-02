@@ -58,15 +58,15 @@ forward 2";
         $this->assertEquals(150, $result);
     }
 
-        public function testSuccess2_calculateFinalPosition130(): void
+        public function testSuccess2_calculateFinalPosition24(): void
     {
-        $secondInput = "forward 5
-down 5
-forward 8
-up 3
-down 8";  
+        $secondInput = "forward 3
+down 4
+forward 3
+up 4
+down 4";  
         $result = $this->boiler->calculateFinalPosition($secondInput);
-        $this->assertEquals(130, $result);
+        $this->assertEquals(24, $result);
     }
 
 }
