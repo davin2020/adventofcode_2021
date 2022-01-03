@@ -1,15 +1,18 @@
 # adventofcode_2021
-This is a template repo for doing framework-free small PHP projects with Unit Tests, like code challenges or katas.
+
+I've reused my PHP BoilerPlate Template to work through the Advent of Code 2021 challenges at https://adventofcode.com/2021/
+
+For each day, I will write unit tests to help me solve the challenge using the sample data set and also test my code.
+
+So far, the `main` branch contains code for these solved days -
+- Day 2 (parts 1 and 2)
 
 ## To Setup & Run Locally
 
-1. Click the green button 'Use this template' and name your new repo
-2. Then clone that repo locally using `git clone <URL>` and `cd` to the new directory
-3. Run `composer install` to install `phpunit`
-4. Run `composer start`
-5. Open `localhost:8095` in a browser
-
-Don't forget to rename the files locally with suitable Class and Test names etc. You can also update composer.json with your own `name/repo name` and change the port number if wanted.
+1. Clone the repo locally and `cd` to the new directory
+2. Run `composer install`
+3. Run `composer start`
+4. Open `localhost:8095` in a browser
 
 ## To Run Unit Tests
 
