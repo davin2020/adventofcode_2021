@@ -50,8 +50,8 @@ class BoilerPlate
 			// $data = array();
 			foreach ($inputArray as $lineItem) {
 				$actionAndAmountArray = explode(" ", $lineItem);
-				print_r('<br> actionAndAmountArray: ');
-				print_r($actionAndAmountArray);
+				// print_r('<br> actionAndAmountArray: ');
+				// print_r($actionAndAmountArray);
 				//ths gives me a nested array, instead of an assocArray, BUT DOES ACTUALY WORK!
 				array_push($instructionArray, $actionAndAmountArray);
 			}
@@ -83,4 +83,75 @@ class BoilerPlate
 			return $finalResult;
 
 	}
+
+	public function calculatePart2Position($inputString): int {
+		//read in file or string and parse contents eg explode on newline and space
+		print_r('<br> PART 2: ');
+		$inputArray = explode(PHP_EOL, $inputString);
+		print_r('<br> inputArray: ');
+		print_r($inputArray);
+
+		//put contents in array of action and amount values
+
+		//setup vars
+		$horizontalPosition = 0;
+		$depth = 0;
+		$aim = 0;
+
+		$instructionArray = array();
+		// array will end up looking like this
+		// [0] => Array
+	 //        (
+	 //            [0] => forward
+	 //            [1] => 5
+	 //        )
+
+	 //    [1] => Array
+	 //        (
+	 //            [0] => down
+	 //            [1] => 5
+	 //        )
+		
+		// $data = array();
+		foreach ($inputArray as $lineItem) {
+			$actionAndAmountArray = explode(" ", $lineItem);
+			// print_r('<br> actionAndAmountArray: ');
+			// print_r($actionAndAmountArray);
+			//ths gives me a nested array, instead of an assocArray, BUT DOES ACTUALY WORK!
+			array_push($instructionArray, $actionAndAmountArray);
+		}
+		print_r('<br> horizontalPosition: ' . $horizontalPosition);
+		print_r('<br> depth: ' . $depth);
+
+		print_r('<br> instructionArray after push: ');
+		print_r($instructionArray);
+
+		//increment vars according to action in [0] and amount in [1] position of nested array inside instructionArray
+		for ($i=0; $i<count($instructionArray); $i++) {
+			$amount = $instructionArray[$i][1];
+			if ($instructionArray[$i][0] == 'forward') {
+				$horizontalPosition += $instructionArray[$i][1];
+				$newAimAmount = $aim * $amount;
+				$depth += $newAimAmount;
+			}
+			else if ($instructionArray[$i][0] == 'down') {
+				// $depth += $instructionArray[$i][1];
+				$aim += $instructionArray[$i][1];
+			}
+			else if ($instructionArray[$i][0] == 'up') {
+				// $depth -= $instructionArray[$i][1];
+				$aim -= $instructionArray[$i][1];
+			}
+		}
+
+		print_r('<br> AFTER FOR LOOP: ' );
+		print_r('<br> horizontalPosition: ' . $horizontalPosition);
+		print_r('<br> depth: ' . $depth);
+		print_r('<br> AIM: ' . $aim);
+
+		// //multiply horiz by depth
+		$finalResult = $horizontalPosition * $depth;
+		return $finalResult;
+	}
+
 }

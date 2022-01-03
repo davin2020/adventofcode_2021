@@ -69,4 +69,17 @@ down 4";
         $this->assertEquals(24, $result);
     }
 
+    
+    public function testSuccess1_calculatePart2Position900(): void
+    {
+        $part2Input = "forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2";  
+        $result = $this->boiler->calculatePart2Position($part2Input);
+        $this->assertEquals(900, $result);
+    }
+
 }
