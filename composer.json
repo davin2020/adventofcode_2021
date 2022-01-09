@@ -1,13 +1,13 @@
 {
-    "name": "davin/boilerplate",
+    "name": "davin/adventofcode_2021",
     "require-dev": {
         "phpunit/phpunit": "^7"
     },
     "scripts": {
-        "start": "php -S localhost:8091",
+        "start": "php -S localhost:8095",
         "test": "phpunit tests --testdox"
     },
     "config": {
-    	"process-timeout": 2000
+    	"process-timeout": 3000
     }
 }
