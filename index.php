@@ -1036,22 +1036,24 @@ forward 8
 up 3
 down 8
 forward 2";  
+
+		// Result for Part 1
 		// $result = $boiler->calculateFinalPosition($puzzleInput);
 		// print_r('<br><br>The Final Position of Horizontal Position times Depth is: ' . $result);
 
-// $puzzleInput
 		$resultPart2 = $boiler->calculatePart2Position($puzzleInput);
 		print_r('<br><br>The Final Position for Part2 is: ' . $resultPart2);
 
 		?>
-		<!--  part 1 answer = 
+
+		<!--  Part 1 - My Answer = 
 		horizontalPosition: 1939
  		depth: 1109
 		The Final Position of Horizontal Position times Depth is: 2,150,351
 
-		part 2 = https://adventofcode.com/2021/day/2#part2
+		Part 2 = https://adventofcode.com/2021/day/2#part2
 
-		MY ANSWER
+		My Answer Part 2
 		 horizontalPosition: 1939
 		 depth: 950357
 		 AIM: 1109
@@ -1061,9 +1063,9 @@ forward 2";
 		RESULT
 		That's the right answer! You are one gold star closer to finding the sleigh keys.
 
-		You have completed Day 2! You can [Share] this victory or [Return to Your Advent Calendar].
-
+		You have completed Day 2!.
 		 -->
+
 		</pre>
 
 	</body>
